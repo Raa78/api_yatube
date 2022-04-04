@@ -1,11 +1,10 @@
 from rest_framework import viewsets
 from rest_framework.permissions import IsAuthenticated
-
 from rest_framework.generics import get_object_or_404
 
 from .permissions import IsAuthorOrReadOnly
 from .serializers import CommentSerializer, GroupSerializer, PostSerializer
-from posts.models import Post, Group, Comment
+from posts.models import Post, Group
 
 
 class PostViewSet(viewsets.ModelViewSet):
@@ -30,7 +29,6 @@ class CommentViewSet(viewsets.ModelViewSet):
         IsAuthorOrReadOnly,
         IsAuthenticated,
     ]
-    queryset = Comment.objects.all()
     serializer_class = CommentSerializer
 
     def get_queryset(self):
