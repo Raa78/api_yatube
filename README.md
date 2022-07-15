@@ -53,12 +53,10 @@ _или_
 ```
 pip install -r requirements.txt
 ``` 
-- Выполните миграции
+- Перейдите в папку yatube_api и выполните команду
 ```
 python manage.py makemigrations
 python manage.py migrate
-```
-- Перейдите в папку api_yatube и выполните команду
 ```
 python manage.py runserver
 ```
