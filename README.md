@@ -54,6 +54,7 @@ _или_
 pip install -r requirements.txt
 ``` 
 - Перейдите в папку yatube_api и выполните:
+
 Миграции
 ```
 python manage.py makemigrations
